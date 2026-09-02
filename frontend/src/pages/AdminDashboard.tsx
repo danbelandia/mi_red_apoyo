@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   IonPage, IonContent, IonHeader, IonToolbar, IonTitle,
-  IonButtons, IonButton, IonCard, IonCardContent, IonLoading, IonToast
+  IonButtons, IonButton, IonCard, IonCardContent, IonLoading, IonToast, IonIcon
 } from '@ionic/react';
+import { power } from 'ionicons/icons';
 import { useAuth } from '../contexts/AuthContext';
 import alertService, { type Alert } from '../services/alert.service';
 
@@ -56,13 +57,14 @@ export default function AdminDashboard() {
           <IonTitle>Panel de Alertas</IonTitle>
           <IonButtons slot="end">
             <IonButton onClick={() => { logout(); navigate('/login'); }}>
-              Cerrar sesión
+              <IonIcon icon={power} slot="icon-only" />
             </IonButton>
           </IonButtons>
         </IonToolbar>
       </IonHeader>
-      <IonContent className="ion-padding">
+      <IonContent>
         <IonLoading isOpen={loading} message="Cargando alertas..." />
+        <div className="ion-padding">
         {!loading && (
           <>
             <div className="admin-stats">
@@ -146,6 +148,7 @@ export default function AdminDashboard() {
             )}
           </>
         )}
+        </div>
       </IonContent>
       <IonToast
         isOpen={showToast}

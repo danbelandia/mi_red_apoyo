@@ -250,11 +250,10 @@ export default function Home() {
               <IonIcon icon={call} slot="start" />
               Mis contactos
             </IonButton>
-            <div className="logout-row">
-              <IonButton fill="outline" color="danger" onClick={() => { logout(); navigate('/login'); }}>
-                <IonIcon icon={power} />
-              </IonButton>
-            </div>
+            <IonButton expand="block" fill="outline" color="danger" onClick={() => { logout(); navigate('/login'); }}>
+              <IonIcon icon={power} slot="start" />
+              Cerrar sesión
+            </IonButton>
           </nav>
         </main>
       </IonContent>

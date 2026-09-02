@@ -223,22 +223,6 @@ ion-modal ion-toolbar {
   min-height: 44px;
 }
 
-.logout-row {
-  display: flex;
-  justify-content: center;
-  padding-top: 0.5rem;
-}
-
-.logout-row ion-button {
-  --border-radius: 50%;
-  min-width: 48px;
-  min-height: 48px;
-  width: 48px;
-  height: 48px;
-  --padding-start: 0;
-  --padding-end: 0;
-}
-
 /* ============================================
    CONFIRM / OPTIONS / SENT SCREENS
    ============================================ */
