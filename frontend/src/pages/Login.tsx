@@ -37,42 +37,44 @@ export default function Login() {
   return (
     <IonPage>
       <IonContent className="login-page">
-        <div className="login-card">
-          <h1 className="login-title">Mi Red de Apoyo</h1>
-          <p className="login-subtitle">Iniciar sesión</p>
+        <div className="login-wrapper">
+          <div className="login-card">
+            <h1 className="login-title">Mi Red de Apoyo</h1>
+            <p className="login-subtitle">Iniciar sesión</p>
 
-          <form onSubmit={handleSubmit}>
-            <IonItem>
-              <IonLabel position="floating">RUT</IonLabel>
-              <IonInput
-                value={rut}
-                onIonInput={(e) => setRut(e.target.value as string)}
-                placeholder="Ej: 11111111-1"
-                required
-              />
-            </IonItem>
+            <form onSubmit={handleSubmit}>
+              <IonItem>
+                <IonLabel position="stacked">RUT</IonLabel>
+                <IonInput
+                  value={rut}
+                  onIonInput={(e) => setRut(e.target.value as string)}
+                  placeholder="Ej: 11111111-1"
+                  required
+                />
+              </IonItem>
 
-            <IonItem>
-              <IonLabel position="floating">Contraseña</IonLabel>
-              <IonInput
-                type="password"
-                value={password}
-                onIonInput={(e) => setPassword(e.target.value as string)}
-                placeholder="Tu contraseña"
-                required
-              />
-            </IonItem>
+              <IonItem>
+                <IonLabel position="stacked">Contraseña</IonLabel>
+                <IonInput
+                  type="password"
+                  value={password}
+                  onIonInput={(e) => setPassword(e.target.value as string)}
+                  placeholder="Tu contraseña"
+                  required
+                />
+              </IonItem>
 
-            {error && (
-              <IonText color="danger" className="error-message">
-                <p>{error}</p>
-              </IonText>
-            )}
+              {error && (
+                <IonText color="danger" className="error-message">
+                  <p>{error}</p>
+                </IonText>
+              )}
 
-            <IonButton expand="block" type="submit" color="primary" size="large" disabled={loading}>
-              {loading ? 'Entrando...' : 'Entrar'}
-            </IonButton>
-          </form>
+              <IonButton expand="block" type="submit" color="primary" size="large" disabled={loading}>
+                {loading ? 'Entrando...' : 'Entrar'}
+              </IonButton>
+            </form>
+          </div>
         </div>
         <IonLoading isOpen={loading} message="Iniciando sesión..." />
       </IonContent>

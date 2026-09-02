@@ -5,7 +5,7 @@ import {
   IonButton, IonModal, IonToast,
   IonLoading, IonIcon
 } from '@ionic/react';
-import { alertCircle, helpCircle, list, call, logOut } from 'ionicons/icons';
+import { alertCircle, helpCircle, list, call, power } from 'ionicons/icons';
 import { useAuth } from '../contexts/AuthContext';
 import alertService from '../services/alert.service';
 
@@ -250,10 +250,11 @@ export default function Home() {
               <IonIcon icon={call} slot="start" />
               Mis contactos
             </IonButton>
-            <IonButton expand="block" fill="outline" color="danger" onClick={() => { logout(); navigate('/login'); }}>
-              <IonIcon icon={logOut} slot="start" />
-              Cerrar sesión
-            </IonButton>
+            <div className="logout-row">
+              <IonButton fill="outline" color="danger" onClick={() => { logout(); navigate('/login'); }}>
+                <IonIcon icon={power} />
+              </IonButton>
+            </div>
           </nav>
         </main>
       </IonContent>

@@ -1,7 +1,13 @@
 import axios from 'axios';
 
+// Detectar si estamos en localhost o en la red local
+const hostname = window.location.hostname;
+const API_BASE = hostname === 'localhost' || hostname === '127.0.0.1'
+  ? 'http://localhost:3000/api'
+  : `http://${hostname}:3000/api`;
+
 const api = axios.create({
-  baseURL: 'http://localhost:3000/api',
+  baseURL: API_BASE,
 });
 
 // Interceptor para agregar el token JWT a cada request

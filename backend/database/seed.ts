@@ -50,7 +50,7 @@ async function seed() {
     name: 'Pedro Pérez',
     email: 'pedro@email.com',
     password: hashedPassword,
-    role: UserRole.OLDER_ADULT,
+    role: UserRole.ADMIN,
     phone: '+56922222222',
   });
 
@@ -77,7 +77,7 @@ async function seed() {
     name: 'Fernando',
     email: 'fernando@email.com',
     password: hashedPassword,
-    role: UserRole.ADMIN,
+    role: UserRole.OLDER_ADULT,
     phone: '+56955555555',
   });
 
