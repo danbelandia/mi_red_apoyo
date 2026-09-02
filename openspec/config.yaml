@@ -1,0 +1,37 @@
+schema: spec-driven
+
+context: |
+  Proyecto: Mi Red de Apoyo — App de alertas y apoyo para adultos mayores
+  Stack: Node.js + TypeScript + NestJS + TypeORM (backend) / React PWA mobile-first (frontend)
+  DB: PostgreSQL (requerido, no SQLite)
+  Auth: JWT simple (sin refresh tokens)
+  Arquitectura: Cliente-servidor, REST API, separación presentación/negocio/persistencia
+  Testing: Sin runner configurado aún (proyecto nuevo)
+  Estilo: Convenciones NestJS estándar, módulos por dominio
+
+rules:
+  proposal:
+    - Incluir plan de rollback para cambios riesgosos
+    - Respetar prioridades: P1 > P2 > P3 (no adelantar P3)
+  specs:
+    - Usar Given/When/Then para escenarios
+    - Usar keywords RFC 2119 (MUST, SHALL, SHOULD, MAY)
+    - Priorizar accesibilidad UX para adultos mayores 70+
+  design:
+    - Incluir diagramas de secuencia para flujos complejos
+    - Documentar decisiones arquitectónicas con justificación
+    - Mantener NestJS modules por dominio (auth, alerts, users, contacts)
+  tasks:
+    - Agrupar por fase, usar numeración jerárquica
+    - Tareas completables en una sesión
+  apply:
+    - Seguir patrones NestJS existentes
+    - TDD deshabilitado (sin test runner aún)
+    tdd: false
+    test_command: ""
+  verify:
+    test_command: ""
+    build_command: ""
+    coverage_threshold: 0
+  archive:
+    - Advertir antes de mergear deltas destructivos

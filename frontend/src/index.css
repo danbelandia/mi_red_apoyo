@@ -1,0 +1,546 @@
+/* ============================================
+   MI RED DE APOYO — Estilos accesibles
+   Adultos mayores 70+ años
+   Compatibles con Ionic React
+   ============================================ */
+
+:root {
+  --color-primary: #1a5276;
+  --color-primary-light: #2980b9;
+  --color-danger: #c0392b;
+  --color-danger-dark: #922b21;
+  --color-warning: #f39c12;
+  --color-warning-dark: #d68910;
+  --color-success: #27ae60;
+  --color-secondary: #7f8c8d;
+  --color-bg: #f5f5f5;
+  --color-card: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-light: #555555;
+  --color-border: #cccccc;
+  --color-red-light: #fdecea;
+  --color-yellow-light: #fef9e7;
+  --radius: 12px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   IONIC OVERRIDES — Tema accesible
+   ============================================ */
+
+ion-content {
+  --background: var(--color-bg);
+}
+
+ion-toolbar {
+  --min-height: 56px;
+}
+
+ion-toolbar ion-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+ion-button {
+  --border-radius: 12px;
+  font-weight: 600;
+  text-transform: none;
+  min-height: 48px;
+}
+
+ion-button[size="large"] {
+  min-height: 64px;
+  font-size: 1.1rem;
+}
+
+ion-card {
+  --background: var(--color-card);
+  --border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin: 0 0 1rem 0;
+}
+
+ion-item {
+  --min-height: 56px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  margin-bottom: 8px;
+  --border-radius: 8px;
+}
+
+ion-input {
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+ion-modal ion-toolbar {
+  --min-height: 56px;
+}
+
+/* ============================================
+   LOGIN
+   ============================================ */
+
+.login-page {
+  --background: linear-gradient(135deg, var(--color-primary) 0%, #1a3c5e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+}
+
+.login-card {
+  background: var(--color-card);
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.login-title {
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.login-subtitle {
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.error-message {
+  margin: 0.5rem 0 1rem 0;
+}
+
+.error-message p {
+  background: var(--color-red-light);
+  color: var(--color-danger);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid var(--color-danger);
+}
+
+/* ============================================
+   HOME — Pantalla principal
+   ============================================ */
+
+.home-page {
+  --background: var(--color-bg);
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1.25rem;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.greeting {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.question {
+  font-size: 1.2rem;
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+}
+
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Botones grandes de emergencia/ayuda */
+.btn-yellow-custom,
+.btn-red-custom {
+  --border-radius: 16px;
+  min-height: 100px;
+  text-align: left;
+  --padding-start: 1.25rem;
+  --padding-end: 1.25rem;
+}
+
+.btn-yellow-custom ion-icon,
+.btn-red-custom ion-icon {
+  font-size: 2rem;
+  margin-right: 0.75rem;
+}
+
+.btn-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-transform: none;
+}
+
+.btn-label {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.btn-sublabel {
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+.home-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.home-nav ion-button {
+  --border-radius: 12px;
+  min-height: 52px;
+}
+
+/* ============================================
+   CONFIRM / OPTIONS / SENT SCREENS
+   ============================================ */
+
+.confirm-screen,
+.options-screen,
+.sent-screen,
+.error-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  flex: 1;
+}
+
+.confirm-icon,
+.sent-icon,
+.error-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.confirm-screen h2,
+.options-screen h2,
+.sent-screen h2,
+.error-screen h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.confirm-text {
+  font-size: 1.2rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.confirm-subtext {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+}
+
+.confirm-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.options-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 2rem;
+}
+
+.btn-option {
+  --border-radius: 12px;
+  min-height: 60px;
+  text-transform: none;
+}
+
+.option-icon {
+  font-size: 1.8rem;
+  margin-right: 0.75rem;
+}
+
+.sent-text,
+.error-screen p {
+  font-size: 1.15rem;
+  color: var(--color-text-light);
+  max-width: 350px;
+  margin-bottom: 2rem;
+}
+
+/* ============================================
+   ALERT HISTORY
+   ============================================ */
+
+.alert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.alert-card {
+  border-left: 6px solid;
+  margin: 0 0 1rem 0;
+}
+
+.alert-red { border-left-color: var(--color-danger); }
+.alert-yellow { border-left-color: var(--color-warning); }
+
+.alert-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.alert-type-icon {
+  font-size: 1.5rem;
+}
+
+.alert-type-label {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.alert-date {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.5rem;
+}
+
+.alert-message {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.alert-status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.status-pending { background: #fdebd0; color: #b7770a; }
+.status-progress { background: #d4efdf; color: #1e8449; }
+.status-resolved { background: #d5f5e3; color: #196f3d; }
+.status-cancelled { background: #eaecee; color: #666; }
+
+/* ============================================
+   CONTACTS
+   ============================================ */
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-avatar {
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  background: #eaf2f8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.contact-role {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.25rem;
+}
+
+.contact-phone {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+.contact-phone:hover { text-decoration: underline; }
+
+/* ============================================
+   ADMIN DASHBOARD
+   ============================================ */
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  text-align: center;
+  --background: var(--color-card);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  font-weight: 600;
+}
+
+.stat-pending .stat-number { color: var(--color-warning-dark); }
+.stat-red .stat-number { color: var(--color-danger); }
+.stat-yellow .stat-number { color: var(--color-warning); }
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.admin-alert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.admin-alert-card {
+  border-left: 6px solid;
+  margin: 0 0 1rem 0;
+}
+
+.border-red { border-left-color: var(--color-danger); }
+.border-yellow { border-left-color: var(--color-warning); }
+
+.admin-alert-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.admin-alert-type {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.admin-alert-status {
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.admin-alert-user,
+.admin-alert-date,
+.admin-alert-message,
+.admin-alert-location {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.25rem;
+}
+
+.admin-alert-message {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.admin-alert-location {
+  font-size: 0.9rem;
+}
+
+.admin-alert-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.admin-alert-actions ion-button {
+  flex: 1;
+  min-width: 140px;
+  --border-radius: 8px;
+}
+
+/* ============================================
+   EMPTY STATE & LOADING
+   ============================================ */
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--color-text-light);
+  font-size: 1.2rem;
+}
+
+/* ============================================
+   RESPONSIVE — Mobile first
+   ============================================ */
+
+@media (min-width: 768px) {
+  .home-content {
+    padding: 2rem;
+  }
+
+  .confirm-actions {
+    flex-direction: row;
+  }
+
+  .admin-stats {
+    gap: 1rem;
+  }
+
+  .admin-alert-actions {
+    flex-wrap: nowrap;
+  }
+}
